@@ -9,7 +9,7 @@
 
 ---
 
-> GrabOn VibeCoder Challenge 2025 | Project 02 | Contextual Embedded Insurance at Deal Redemption
+> GrabOn VibeCoder Challenge 2026 | Project 02 | Contextual Embedded Insurance at Deal Redemption
 
 ## Section 1: What I Built
 
