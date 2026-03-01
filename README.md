@@ -1,5 +1,14 @@
 # GrabInsurance MCP
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green?style=flat-square&logo=fastapi)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
+![MCP](https://img.shields.io/badge/MCP-FastMCP-orange?style=flat-square)
+![Claude](https://img.shields.io/badge/Claude-3.5_Sonnet-purple?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
+
+---
+
 > GrabOn VibeCoder Challenge 2025 | Project 02 | Contextual Embedded Insurance at Deal Redemption
 
 ## Section 1: What I Built
@@ -75,9 +84,11 @@ Rule-based classification handles 80% of deals instantly (sub-millisecond) with 
 
 ### Prerequisites
 
-- Python 3.11 or higher
-- Node.js 18 or higher
-- uv package manager (recommended) or pip
+| Requirement | Version |
+|-------------|--------|
+| Python | 3.11 or higher |
+| Node.js | 18 or higher |
+| uv | Latest (recommended) or pip |
 
 ### Step 1: Clone and Setup
 
@@ -122,6 +133,8 @@ npm run dev
 Navigate to <http://localhost:5173> in your browser.
 
 ## Section 5: How to Connect to Claude Desktop
+
+> **Live Evaluation Note:** The MCP server will be tested live by connecting to Claude Desktop. The hammer icon must appear in the chat input before demo begins.
 
 > **See also:** [MCP_CONNECTION_GUIDE.md](MCP_CONNECTION_GUIDE.md) for the full step-by-step guide with detailed troubleshooting.
 
@@ -176,6 +189,8 @@ Run `which uv` and `pwd` to find your absolute paths. Replace `/ABSOLUTE/PATH/TO
 | Config file can't be found via terminal | `Application Support` has a space in the path | Quote the path: `open "$HOME/Library/Application Support/Claude/..."` |
 
 ## Section 6: Running Tests
+
+> **All 12 edge cases are covered in the test suite.** Run `pytest tests/ -v` to verify before submitting.
 
 ```bash
 # Run all tests with verbose output
@@ -233,3 +248,7 @@ No validation exists for suspicious patterns (same user converting multiple time
 ---
 
 Built for the GrabOn VibeCoder Challenge 2025 by Saketh T.
+
+---
+
+> Built with Claude Code for GrabOn VibeCoder Challenge 2025 · Project 02: GrabInsurance
