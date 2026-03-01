@@ -1,0 +1,23 @@
+{
+  "name": "grabinsurance-mcp",
+  "version": "0.1.0",
+  "description": "Contextual embedded insurance at deal redemption - MCP Server for GrabOn",
+  "author": "Saketh T",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "install:frontend": "cd frontend && npm install",
+    "start:api": "uvicorn api.main:app --port 8000 --reload",
+    "start:pricing": "uvicorn api.pricing_api:app --port 8001 --reload",
+    "start:mcp": "python mcp_server/server.py",
+    "test": "pytest tests/ -v"
+  },
+  "keywords": [
+    "mcp",
+    "insurance",
+    "grabon",
+    "claude"
+  ]
+}

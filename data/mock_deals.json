@@ -1,0 +1,417 @@
+[
+  {
+    "deal_id": "D001",
+    "merchant": "IndiGo",
+    "category": "travel",
+    "subcategory": "flight",
+    "deal_value": 12400,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 18,
+      "categories_bought": ["travel", "electronics"]
+    },
+    "expected": {
+      "products": ["TRVL_CANCEL", "TRVL_MED"],
+      "show_offer": true,
+      "cart_context": "single"
+    }
+  },
+  {
+    "deal_id": "D002",
+    "merchant": "Boat",
+    "category": "electronics",
+    "subcategory": "gadget",
+    "deal_value": 2999,
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 5,
+      "categories_bought": ["electronics"]
+    },
+    "expected": {
+      "products": ["ELEC_WARRANTY"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "deal_value under 5000 threshold for screen cover"
+    }
+  },
+  {
+    "deal_id": "D003",
+    "merchant": "Zomato",
+    "category": "food",
+    "subcategory": "subscription",
+    "deal_value": 1499,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 42,
+      "categories_bought": ["food", "travel"]
+    },
+    "expected": {
+      "products": ["FOOD_ACCIDENT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "ambiguous subcategory, low confidence"
+    }
+  },
+  {
+    "deal_id": "D004",
+    "merchant": "MakeMyTrip",
+    "category": "travel",
+    "subcategory": "hotel",
+    "deal_value": 8500,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 9,
+      "categories_bought": ["travel"]
+    },
+    "expected": {
+      "products": ["TRVL_RETURN", "TRVL_CANCEL"],
+      "show_offer": true,
+      "cart_context": "single"
+    }
+  },
+  {
+    "deal_id": "D005",
+    "merchant": "Nykaa",
+    "category": "health",
+    "subcategory": "pharmacy",
+    "deal_value": 499,
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 3,
+      "categories_bought": ["health"]
+    },
+    "expected": {
+      "products": ["HEALTH_OPD"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "low deal value but above 200 threshold"
+    }
+  },
+  {
+    "deal_id": "D006",
+    "merchant": "Samsung",
+    "category": "electronics",
+    "subcategory": "phone",
+    "deal_value": 74999,
+    "user_history": {
+      "risk_tier": "high",
+      "total_purchases": 2,
+      "categories_bought": ["electronics"]
+    },
+    "expected": {
+      "products": ["ELEC_SCREEN", "ELEC_WARRANTY"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "deal_value well above 5000, both shown"
+    }
+  },
+  {
+    "deal_id": "D007",
+    "merchant": "CART:Myntra+MakeMyTrip",
+    "category": "MULTI",
+    "subcategory": "MULTI",
+    "deal_value": 11400,
+    "cart_items": [
+      {
+        "merchant": "Myntra",
+        "category": "fashion",
+        "subcategory": "apparel",
+        "deal_value": 1800
+      },
+      {
+        "merchant": "MakeMyTrip",
+        "category": "travel",
+        "subcategory": "flight",
+        "deal_value": 9600
+      }
+    ],
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 14,
+      "categories_bought": ["fashion", "travel"]
+    },
+    "expected": {
+      "products": ["TRVL_CANCEL"],
+      "show_offer": true,
+      "cart_context": "multi",
+      "note": "Travel wins per waterfall rule"
+    }
+  },
+  {
+    "deal_id": "D008",
+    "merchant": "CART:Swiggy+Healthkart",
+    "category": "MULTI",
+    "subcategory": "MULTI",
+    "deal_value": 2500,
+    "cart_items": [
+      {
+        "merchant": "Swiggy",
+        "category": "food",
+        "subcategory": "delivery",
+        "deal_value": 400
+      },
+      {
+        "merchant": "Healthkart",
+        "category": "health",
+        "subcategory": "supplement",
+        "deal_value": 2100
+      }
+    ],
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 31,
+      "categories_bought": ["food", "health"]
+    },
+    "expected": {
+      "products": ["HEALTH_OPD"],
+      "show_offer": true,
+      "cart_context": "multi",
+      "note": "Higher deal value wins between food and health"
+    }
+  },
+  {
+    "deal_id": "D009",
+    "merchant": "Puma",
+    "category": "fashion",
+    "subcategory": "sports",
+    "deal_value": 5500,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 7,
+      "categories_bought": ["fashion"]
+    },
+    "expected": {
+      "products": ["PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "fallback_used": true,
+      "note": "ambiguous category, fallback product"
+    }
+  },
+  {
+    "deal_id": "D010",
+    "merchant": "AirAsia",
+    "category": "travel",
+    "subcategory": "international",
+    "deal_value": 31000,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 22,
+      "categories_bought": ["travel", "electronics"]
+    },
+    "expected": {
+      "products": ["TRVL_MED", "TRVL_CANCEL"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "international flight, TRVL_MED wins"
+    }
+  },
+  {
+    "deal_id": "D011",
+    "merchant": "Apple",
+    "category": "electronics",
+    "subcategory": "tablet",
+    "deal_value": 89900,
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 45,
+      "categories_bought": ["electronics", "fashion"]
+    },
+    "expected": {
+      "products": ["ELEC_SCREEN", "ELEC_WARRANTY"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "iPad Pro - high value tablet with both covers"
+    }
+  },
+  {
+    "deal_id": "D012",
+    "merchant": "Vistara",
+    "category": "travel",
+    "subcategory": "train",
+    "deal_value": 4500,
+    "user_history": {
+      "risk_tier": "high",
+      "total_purchases": 8,
+      "categories_bought": ["travel"]
+    },
+    "expected": {
+      "products": ["TRVL_CANCEL"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "Train travel - cancellation cover only"
+    }
+  },
+  {
+    "deal_id": "D013",
+    "merchant": "Swiggy",
+    "category": "food",
+    "subcategory": "delivery",
+    "deal_value": 850,
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 120,
+      "categories_bought": ["food"]
+    },
+    "expected": {
+      "products": ["FOOD_ACCIDENT", "PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "Food delivery with accident cover"
+    }
+  },
+  {
+    "deal_id": "D014",
+    "merchant": "1mg",
+    "category": "health",
+    "subcategory": "clinic",
+    "deal_value": 1500,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 12,
+      "categories_bought": ["health", "food"]
+    },
+    "expected": {
+      "products": ["HEALTH_OPD", "PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "Clinic appointment with OPD cover"
+    }
+  },
+  {
+    "deal_id": "D015",
+    "merchant": "LG",
+    "category": "electronics",
+    "subcategory": "tv",
+    "deal_value": 45999,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 6,
+      "categories_bought": ["electronics"]
+    },
+    "expected": {
+      "products": ["ELEC_WARRANTY", "PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "TV purchase - warranty focused"
+    }
+  },
+  {
+    "deal_id": "D016",
+    "merchant": "CART:Amazon+Flipkart",
+    "category": "MULTI",
+    "subcategory": "MULTI",
+    "deal_value": 28500,
+    "cart_items": [
+      {
+        "merchant": "Amazon",
+        "category": "electronics",
+        "subcategory": "laptop",
+        "deal_value": 22000
+      },
+      {
+        "merchant": "Flipkart",
+        "category": "electronics",
+        "subcategory": "gadget",
+        "deal_value": 6500
+      }
+    ],
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 25,
+      "categories_bought": ["electronics", "travel"]
+    },
+    "expected": {
+      "products": ["ELEC_WARRANTY", "PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "multi",
+      "note": "Multi-electronics cart, warranty for both"
+    }
+  },
+  {
+    "deal_id": "D017",
+    "merchant": "Cleartrip",
+    "category": "travel",
+    "subcategory": "bus",
+    "deal_value": 1200,
+    "user_history": {
+      "risk_tier": "high",
+      "total_purchases": 4,
+      "categories_bought": ["travel"]
+    },
+    "expected": {
+      "products": ["TRVL_CANCEL"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "Bus travel - only cancellation relevant"
+    }
+  },
+  {
+    "deal_id": "D018",
+    "merchant": "Nike",
+    "category": "fashion",
+    "subcategory": "apparel",
+    "deal_value": 8999,
+    "user_history": {
+      "risk_tier": "low",
+      "total_purchases": 35,
+      "categories_bought": ["fashion", "electronics"]
+    },
+    "expected": {
+      "products": ["PURCHASE_PROTECT"],
+      "show_offer": true,
+      "cart_context": "single",
+      "note": "Fashion fallback to purchase protection"
+    }
+  },
+  {
+    "deal_id": "D019",
+    "merchant": "CART:Goibibo+OnePlus",
+    "category": "MULTI",
+    "subcategory": "MULTI",
+    "deal_value": 55999,
+    "cart_items": [
+      {
+        "merchant": "Goibibo",
+        "category": "travel",
+        "subcategory": "flight",
+        "deal_value": 18000
+      },
+      {
+        "merchant": "OnePlus",
+        "category": "electronics",
+        "subcategory": "phone",
+        "deal_value": 37999
+      }
+    ],
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 19,
+      "categories_bought": ["travel", "electronics"]
+    },
+    "expected": {
+      "products": ["TRVL_CANCEL", "ELEC_SCREEN"],
+      "show_offer": true,
+      "cart_context": "multi",
+      "note": "Travel + High-value phone: both get coverage"
+    }
+  },
+  {
+    "deal_id": "D020",
+    "merchant": "Ola",
+    "category": "travel",
+    "subcategory": "flight",
+    "deal_value": 150,
+    "user_history": {
+      "risk_tier": "medium",
+      "total_purchases": 50,
+      "categories_bought": ["travel", "food"]
+    },
+    "expected": {
+      "products": [],
+      "show_offer": false,
+      "cart_context": "single",
+      "note": "Deal value below Rs 200 threshold - no offer"
+    }
+  }
+]

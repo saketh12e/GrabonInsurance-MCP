@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F8F9FA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-hover:hover {
+  @apply shadow-card-hover -translate-y-1;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B2B 0%, #E55A1F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer effect for loading */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Glow effect on buttons */
+.btn-glow {
+  @apply relative overflow-hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 70%);
+}
+
+.btn-glow:hover::before {
+  @apply opacity-100;
+}
+
+/* Status indicator pulse */
+.status-pulse {
+  @apply relative;
+}
+
+.status-pulse::after {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+}
+
+.badge-primary {
+  @apply bg-primary/10 text-primary;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Number animation */
+.number-animate {
+  font-variant-numeric: tabular-nums;
+  transition: all 0.3s ease-out;
+}
+
+/* Stat card */
+.stat-card {
+  @apply bg-white rounded-2xl p-4 border border-gray-100;
+  @apply transition-all duration-300;
+}
+
+.stat-card:hover {
+  @apply border-primary/20;
+  box-shadow: 0 0 20px rgba(255, 107, 43, 0.1);
+}
+
+/* Table row hover */
+.table-row-hover {
+  @apply transition-colors duration-200;
+}
+
+.table-row-hover:hover {
+  @apply bg-gray-50;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #FF6B2B, #FF8A52, #E55A1F, #FF6B2B);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Premium badge shine */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(-45deg);
+  animation: shine-move 3s infinite;
+}
+
+@keyframes shine-move {
+  0% { transform: translateX(-100%) rotate(-45deg); }
+  100% { transform: translateX(100%) rotate(-45deg); }
+}

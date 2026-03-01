@@ -1,0 +1,74 @@
+[
+  {
+    "id": "TRVL_CANCEL",
+    "name": "Travel Cancellation Cover",
+    "category_triggers": ["travel"],
+    "subcategory_triggers": ["flight", "train", "bus"],
+    "base_premium_rate": 0.007,
+    "coverage_multiplier": 100,
+    "description": "Covers trip cancellation due to illness, weather, or airline fault"
+  },
+  {
+    "id": "TRVL_MED",
+    "name": "Travel Medical Cover",
+    "category_triggers": ["travel"],
+    "subcategory_triggers": ["flight", "international"],
+    "base_premium_rate": 0.005,
+    "coverage_multiplier": 200,
+    "description": "Medical expenses abroad or during travel"
+  },
+  {
+    "id": "ELEC_WARRANTY",
+    "name": "Electronics Extended Warranty",
+    "category_triggers": ["electronics"],
+    "subcategory_triggers": ["laptop", "gadget", "tv"],
+    "base_premium_rate": 0.03,
+    "coverage_multiplier": 50,
+    "description": "Extends manufacturer warranty by 1 year"
+  },
+  {
+    "id": "ELEC_SCREEN",
+    "name": "Screen Damage Cover",
+    "category_triggers": ["electronics"],
+    "subcategory_triggers": ["phone", "tablet"],
+    "base_premium_rate": 0.02,
+    "coverage_multiplier": 40,
+    "description": "Single accidental screen damage repair covered once"
+  },
+  {
+    "id": "FOOD_ACCIDENT",
+    "name": "Personal Accident Cover Food Delivery",
+    "category_triggers": ["food"],
+    "subcategory_triggers": ["delivery"],
+    "base_premium_rate": 0.001,
+    "coverage_multiplier": 5000,
+    "description": "Accidental injury coverage during food delivery interaction"
+  },
+  {
+    "id": "HEALTH_OPD",
+    "name": "Health OPD Cover",
+    "category_triggers": ["health"],
+    "subcategory_triggers": ["pharmacy", "clinic", "diagnostics"],
+    "base_premium_rate": 0.015,
+    "coverage_multiplier": 30,
+    "description": "Outpatient doctor visit and medicine coverage"
+  },
+  {
+    "id": "TRVL_RETURN",
+    "name": "Return Journey Protection",
+    "category_triggers": ["travel"],
+    "subcategory_triggers": ["hotel", "bus", "train"],
+    "base_premium_rate": 0.004,
+    "coverage_multiplier": 80,
+    "description": "Covers missed or cancelled return journey"
+  },
+  {
+    "id": "PURCHASE_PROTECT",
+    "name": "Purchase Protection",
+    "category_triggers": ["electronics", "fashion", "health"],
+    "subcategory_triggers": ["*"],
+    "base_premium_rate": 0.01,
+    "coverage_multiplier": 20,
+    "description": "30-day coverage against theft, damage, or non-delivery. Universal fallback product."
+  }
+]

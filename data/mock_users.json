@@ -1,0 +1,47 @@
+[
+  {
+    "user_id": "U001",
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma@example.com",
+    "risk_tier": "low",
+    "total_purchases": 45,
+    "categories_bought": ["travel", "electronics", "food"],
+    "persona": "Frequent traveler, tech enthusiast, low-risk profile"
+  },
+  {
+    "user_id": "U002",
+    "name": "Priya Patel",
+    "email": "priya.patel@example.com",
+    "risk_tier": "medium",
+    "total_purchases": 12,
+    "categories_bought": ["fashion", "health"],
+    "persona": "Fashion-forward shopper, health-conscious, moderate activity"
+  },
+  {
+    "user_id": "U003",
+    "name": "Amit Kumar",
+    "email": "amit.kumar@example.com",
+    "risk_tier": "high",
+    "total_purchases": 3,
+    "categories_bought": ["electronics"],
+    "persona": "New user, high-value electronics buyer, elevated risk"
+  },
+  {
+    "user_id": "U004",
+    "name": "Sneha Reddy",
+    "email": "sneha.reddy@example.com",
+    "risk_tier": "low",
+    "total_purchases": 78,
+    "categories_bought": ["food", "travel", "health", "fashion"],
+    "persona": "Power user, diverse categories, very low risk"
+  },
+  {
+    "user_id": "U005",
+    "name": "Vikram Singh",
+    "email": "vikram.singh@example.com",
+    "risk_tier": "medium",
+    "total_purchases": 22,
+    "categories_bought": ["travel", "electronics"],
+    "persona": "Business traveler, gadget buyer, standard risk profile"
+  }
+]

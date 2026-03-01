@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "grabinsurance": {
+      "command": "/ABSOLUTE/PATH/TO/uv",
+      "args": [
+        "run",
+        "--directory",
+        "/ABSOLUTE/PATH/TO/Grabon-MCP",
+        "python",
+        "mcp_server/server.py"
+      ],
+      "env": {
+        "ANTHROPIC_API_KEY": "your-api-key-here",
+        "CATALOG_PATH": "/ABSOLUTE/PATH/TO/Grabon-MCP/data/insurance_catalog.json",
+        "AB_DB_PATH": "/ABSOLUTE/PATH/TO/Grabon-MCP/data/ab_events.db"
+      }
+    }
+  }
+}

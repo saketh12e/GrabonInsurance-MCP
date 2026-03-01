@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "grabinsurance-mcp"
+version = "0.1.0"
+description = "Contextual embedded insurance at deal redemption - MCP Server for GrabOn"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Saketh T" }
+]
+keywords = ["mcp", "insurance", "grabon", "claude", "anthropic"]
+
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "anthropic>=0.40.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.0.0",
+    "aiosqlite>=0.20.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.6.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_server", "insurance_engine", "api"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
